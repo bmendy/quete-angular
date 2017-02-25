@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="formApp">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="stylesheets/styleform.css">
+	<link rel="stylesheet" href="vendor/tacit-0.6.1.min.css">
+	<title>Formulaire inscription</title>
+</head>
+<body>
+	<h1>Votre inscription</h1>
+	<h2>Entrez vos données ici</h2>
+	
+	<div id="formulaire">
+		<div id="Questionnaire">
+			
+			<form id="add-student" name="studentForm">
+
+				<label for="firstname">Prénom : </label>
+				<input id="firstname" name="firstname" ng-model="$ctrl.firstname">
+
+				<label for="lastname">NOM : </label>
+				<input id="lastname" name="lastname" ng-model="$ctrl.lastname">
+
+				
+				<label for="email"></label>Email
+				<input id="email" name="email" ng-model="$ctrl.email">
+
+				<button ng-click="showme=true">Ajoutez</button>
+			</form>
+		</div>
+		<div id="students" ng-show="showme">
+			<h3>Vos données</h3>
+			<table >
+				<tr>
+					<td>{{$ctrl.firstname}}</td>
+					<td>{{$ctrl.lastname}}</td>
+					<td>{{$ctrl.email}}</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+
+	<!-- App models -->
+		<!-- <script type="text/javascript" src="/app/models/student.js"></script>
+		<script type="text/javascript" src="/app/collections/students.js"></script> -->
+		<script src="js/libs/angular.min.js"></script>
+
+		<!-- angular -->
+		<script src="js/formApp.js"></script>
+		<script src="js/components/myForm/myFormModule.js"></script>
+		<script src="js/components/myForm/myFormController.js"></script>
+		<script src="js/components/myForm/myFormComponent.js"></script>
+	</body>
+	</html>
