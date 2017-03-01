@@ -1,4 +1,2 @@
 'use strict';
-angular.module('formApp',[
-	'myForm'
-	]);
+angular.module('formApp',['myForm']);

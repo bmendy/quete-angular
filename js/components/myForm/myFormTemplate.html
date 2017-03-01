@@ -1,32 +1,33 @@
+<h1>Votre inscription</h1>
+<h2>Entrez vos données ici</h2>
+
 <div id="formulaire">
 	<div id="Questionnaire">
-		<h3>Questionnaire</h3>
+
 		<form id="add-student" name="studentForm">
+
 			<label for="firstname">Prénom : </label>
 			<input id="firstname" name="firstname" ng-model="$ctrl.firstname">
-			
+
 			<label for="lastname">NOM : </label>
-			<input id="lastname" name="lastname">
-			<label for="Age">Age</label>
-			<input id="age" name="age">
-			<label for="address">Adresse</label>
-			<input id="address" name="address">
-			s
-			<label for="email"></label>Email
-			<input id="email" name="email">
-			<button>Ajoutez</button>
+			<input id="lastname" name="lastname" ng-model="$ctrl.lastname">
+
+
+			<label for="email">Email :</label>
+			<input id="email" name="email" ng-model="$ctrl.email">
+
+			<input id="button" type="submit" ng-click="$ctrl.add()" style="margin-top: 15px"/>
 		</form>
 	</div>
 	<div id="students">
 		<h3>Vos données</h3>
-		<table >
+		<table ng-repeat="row in $ctrl.mytable">
 			<tr>
-				<td>{{$ctrl.firstname}}</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+				<td>{{row.firstname}}</td>
+				<td>{{row.lastname}}</td>
+				<td>{{row.email}}</td>
 			</tr>
+			
 		</table>
 	</div>
 </div>

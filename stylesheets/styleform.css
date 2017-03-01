@@ -45,6 +45,9 @@ body {
 #toolbar *{
 	vertical-align: middle;
 }
+#button {
+	margin-top:20px;
+}
 input {padding: 5px; margin: 5px;}
 /*.btn-danger {
 	background-color: red;

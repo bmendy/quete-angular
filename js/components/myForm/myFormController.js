@@ -1,12 +1,7 @@
 angular.module('myForm').controller('myFormController', [function(){
 	let myFormCollection;
-	this.controlName;
-	this.controlEmail;
-
-	this.firstname = "name"
-	this.lastname = "name"
-	this.email = "name"
 	
+
 }])
 
 

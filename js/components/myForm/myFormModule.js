@@ -1,1 +1,1 @@
-angular.module('myForm', [])
+angular.module('myForm', []);
